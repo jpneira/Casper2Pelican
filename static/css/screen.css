@@ -2395,6 +2395,12 @@ td,th {
 
 tbody tr:nth-child(odd) td, tbody tr:nth-child(odd) th {background-color: #f9f9f9}
 
+/* Tox*/
+
+.icon-tox:before {
+    content: "\e900";
+}
+
 /* Footnotes */
 .footnote td,th {border: none}
 

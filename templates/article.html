@@ -16,25 +16,21 @@
             {{ article.content }}
         </section>
         <footer class="post-footer">
-			{% if article.author_pic %}
+			{% if article.author_information %}
             <figure class="author-image">
-                <a class="img" href="{{ article.author.url }}" style="background-image: url('{% if article.author_pic %}{{ article.author_pic }}{% else %}{{ AUTHOR_PIC_URL }}{% endif %}')"><span class="hidden">{{ article.author }}'s Picture</span></a>
+                <a class="img" href="{{ article.author.url }}" style="background-image: url('{% if article.author_pic %}{{ article.author_pic }}{% else %}{{ AUTHOR_PIC }}{% endif %}')"><span class="hidden">{{ article.author }}'s Picture</span></a>
             </figure>
-			{% else %} <br/ >
-			{% endif %}
 			<section class="author">
-			{% if article.author_bio %}
-                <h4>
-                    <a href="{{ article.author.url }}">{% if article.author %}{{ article.author }}{% else %}{{ AUTHOR }}{% endif %}</a>
-                </h4>
-                <p>{% if article.author_bio %}{{ article.author_bio }}{% else %}{{ AUTHOR_BIO }}{% endif %}</p>
-			{% else %} <br/ >
+                <h4><a href="{{ article.author.url }}">{% if article.author %}{{ article.author }}{% else %}{{ AUTHOR }}{% endif %}</a></h4>
+			<p>{% if article.author_bio %}{{ article.author_bio }}{% else %}{{ AUTHOR_BIO }}{% endif %}</p>
                 <div class="author-meta">
-					{% if article.author_location %}
                     <span class="author-location icon-location">{% if article.author_location %}{{ article.author_location }}{% else %}{{ AUTHOR_LOCATION }}{% endif %}</span> {% if article.author_url %}<span class="author-link icon-link"><a href="{{ article.author_url }}">{{ article.author_url }}</a></span>{% endif %}
-					{% endif %}
+					{% if article.author_tox_id %}{% else %}{% if tox_id %}
+                    <span class="author-link icon-tox"><a href="tox:{{ TOX_ID }}"> Tox ID</a></span>
+					{% endif %}{% endif %}
                 </div>
             </section>
+			{% else %} <br/ >
 			{% endif %}
             <section class="share">
                 <h4>Share this post</h4>
