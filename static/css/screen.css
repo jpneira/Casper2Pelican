@@ -2321,6 +2321,12 @@ body:not(.post-template) .post-title {
 	margin-right: 5px;
 }
 
+.icon-tag:before {
+	font-family: 'casper-icons' !important;
+	content: "\e935";
+	margin-right: 5px;
+}
+
 
 /* Links */
 a {
