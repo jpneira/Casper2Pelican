@@ -22,13 +22,13 @@
         <footer class="post-meta">
             {% if AUTHOR_PIC_URL %}<img class="author-thumb" src="{% if article.author_pic_url %}{{ article.author_pic_url }}{% else %}{{ AUTHOR_PIC_URL }}{% endif %}" alt="{{ article.author }}" nopin="nopin">{% endif %}
             <a href="{{ article.author.url }}">{% if article.author %}{{ article.author }}{% else %}{{ AUTHOR }}{% endif %}</a> en <a href="{{ SITEURL }}/{{ article.category.url }}" rel="category">{{ article.category }}</a>
-            <time class="post-date" itemprop="datePublished" datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
+            <time class="post-date">{{ article.locale_date }}</time>
         </footer>
     </article>
     {% endfor %}
     {% else %}
-    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-        <header class="post-header" itemprop="headline">
+    <article class="post">
+        <header class="post-header">
             <h2 class="post-title">
             No hay post actualmente
             </h2>

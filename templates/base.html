@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ SITE_LANG }}">
     <head>
         <meta charset="utf-8">
         <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
@@ -21,23 +21,6 @@
         <meta http-equiv="Cache-control" content="max-age=2592000, public">
         <meta http-equiv="content-style-type" content="text/css">
         
-
-        <link rel="publisher" href="{{ PUBLISHER }}">
-        <link rel="apple-touch-startup-image" href="{{ SITEURL }}/theme/images/logo.png">
-        <link type="text/plain" rel="socialmedia" href="{{ SITEURL }}/socialmedia.txt">
-        <meta http-equiv="content-type" content="text/html;charset=utf-8">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-        <meta name="apple-mobile-web-app-capable" content="yes"/>
-        <meta name="application-name" content="{{ SITENAME }}"/>
-        <meta name="msapplication-starturl" content="http:{{ SITEURL }}"/>
-        <meta name="msapplication-tooltip" content="{{ TAG_LINE }}"/>
-        <meta name="msapplication-window" content="width=1024;height=768"/>
-
-
-
-        <!-- <meta name="msapplication-task" content="name={{ SITENAME }};action-uri=http:{{ SITEURL }};icon-uri={{ SITEURL }}/theme/images/favicon.ico"/> -->
-
-
         <meta name="msapplication-TileImage" content="{{ SITEURL }}/theme/images/apple-touch-icon-144x144.png"/>
         <meta name="msapplication-TileColor" content="#1F1F21"/>
         <meta name="application-name" content="{{ SITENAME }}">
@@ -145,7 +128,7 @@
             </header>
             {% block content %}
             {% endblock %}
-            <footer class="site-footer clearfix" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
+            <footer class="site-footer clearfix">
                 <section class="copyright">
                     <a itemprop="url" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
                         CC Attribution-ShareAlike 4.0 International License</a>.
