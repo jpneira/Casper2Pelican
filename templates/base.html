@@ -104,7 +104,7 @@
         <meta itemprop="inLanguage" content="{{ DEFAULT_LANG }}">
         {% include 'navigation.html' %}
         <div class="site-wrapper">
-            <header class="main-header{% if article %} post-head{% endif %}{% block header_type %}{% endblock %}" style="background-image: url('{% block header_image %}{{ DEFAULT_HEADER_IMAGE }}{% endblock %}');">
+            <header class="main-header{% block header_type %}{% endblock %}" style="background-image: url('{% block header_image %}{{ DEFAULT_HEADER_IMAGE }}{% endblock %}');">
                 <nav class="main-nav overlay clearfix">
 					<a id="site-home-link" title="Inicio" href="{{ SITEURL }}"></a>
                     <a class="menu-button" href="#">
