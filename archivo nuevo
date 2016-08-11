@@ -29,3 +29,7 @@
                 </div>
             </section>
 			{% else %} <br/ >
+
+
+:: tags
+	{% for tag in article.tags %}<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag.name | title }}{% if not loop.last %}, {% endif %}</a>{% endfor %}

@@ -36,8 +36,7 @@
             <a class="read-more" itemprop="url" href="{{ SITEURL }}/{{ article.url}}" title="Read this article" rel="bookmark"></a>
         </section>
         <footer class="post-meta">
-            <a href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a> on {% for tag in article.tags %}<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag.name | title }}{% if not loop.last %}, {% endif %}</a>{% endfor %}
-            <time class="post-date" itemprop="datePublished" datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
+            <a href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a> en  en <a href="{{ SITEURL }}/{{ article.category.url }}" rel="category">{{ article.category }}</a> <time class="post-date" itemprop="datePublished" datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
         </footer>
     </article>
     {% endfor %}
