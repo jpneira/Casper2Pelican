@@ -1,2 +1,8 @@
 
 				<br/>{% for tag in article.tags %}<span class="icon-tag"><a href="{{ tag.url }}"></span>{{ tag.name | title }}{% if not loop.last %} {% endif %}</a>{% endfor %}
+
+{% if article.no_cover %}no-cover{% endif %}
+
+
+
+{% if no_cover %}no-cover {% endif %}{% if article %}post-head{% endif %}{% if page %}post-head {% endif %}
