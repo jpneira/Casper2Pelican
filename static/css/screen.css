@@ -2417,3 +2417,37 @@ tbody tr:nth-child(odd) td, tbody tr:nth-child(odd) th {background-color: #f9f9f
 /* Footnotes */
 .footnote td,th {border: none}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ul.tagcloud {
+  list-style: none;
+    padding: 0;
+}
+
+ul.tagcloud li {
+    display: inline-block;
+}
+
+li.tag-1 {
+    font-size: 150%;
+}
+
+li.tag-2 {
+    font-size: 120%;
+}
+
+ul.tagcloud .list-group-item <span>.badge {
+    background-color: grey;
+    color: white;
+}

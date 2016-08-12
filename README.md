@@ -1,12 +1,12 @@
-# Casper2Pelican
+# Casper
 
 Based on default theme for [Ghost](http://github.com/tryghost/ghost/).
-Originally adapted for Pelican by Abr4xas, amendments by Colin Wren.
+Originally adapted for Pelican by [Abr4xas](http://github.com/abr4xas/), amendments by Colin Wren.
 
 You will need to install the `neighbors` Pelican plugin for this theme to work.
 
 ## Meta Data used with this theme (add to `pelicanconf.py`).
-* `AUTHOR_PIC_URL` = URL for picture used by author page / bottom of article.
+* `AUTHOR_PIC` = URL for picture used by author page / bottom of article.
 * `AUTHOR_BIO` = Short bio used by author page / bottom of article.
 * `AUTHOR_LOCATION` = Location shown on author page / bottom of article.
 * `SITE_DESCRIPTION` = Used in meta data.
@@ -17,7 +17,9 @@ You will need to install the `neighbors` Pelican plugin for this theme to work.
 
 ## Demo
 
-These blogs are using Casper2Pelican:
+See [A Full and Comprehensive Style Test](http://jpneira.net/completa-y-exhaustiva-prueba-de-estilo.html).
+
+And these blogs are using Casper2Pelican:
 * [Abr4xas](http://blog.abr4xas.org)
 * [Colin Wren](http://colinwren.is/awesome)
 
@@ -26,4 +28,4 @@ These blogs are using Casper2Pelican:
 
 ## Copyright & License
 
-Copyright (c) 2013-2015 Ghost Foundation - Released under the MIT [License](LICENSE).
+Copyright (c) 2013-2016 Ghost Foundation - Released under the MIT [License](LICENSE).
