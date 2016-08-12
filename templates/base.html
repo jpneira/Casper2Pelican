@@ -142,12 +142,5 @@
     <script type="text/javascript" src="{{ SITEURL }}/theme/js/jquery-1.11.2.min.js"></script>
     <script type="text/javascript" src="{{ SITEURL }}/theme/js/jquery.fitvids.min.js"></script>
     <script type="text/javascript" src="{{ SITEURL }}/theme/js/index.min.js"></script>
-    {# Mathjax for LaTeX rendering #}
-    {% if article and article.latex %}
-        {{ article.latex }}
-    {% endif %}
-    {% if page and page.latex %}
-        {{ page.latex }}
-    {% endif %}
     </body>
 </html>
