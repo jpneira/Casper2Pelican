@@ -1,23 +1,23 @@
 {% extends "base.html" %}
 {% block header_type %}{% endblock %}
 {% block content %}
-<main id="content" class="content" role="main" itemprop="mainContentOfPage" itemscope="" itemtype="http://schema.org/Blog">
+<main id="content" class="content">
    <!-- <div>
         {% include 'pagination.html' %}
     </div> -->
     {% if articles_page.object_list %}
     {% for article in articles_page.object_list %}
-    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-        <header class="post-header" itemprop="headline">
+    <article class="post">
+        <header class="post-header">
             <h2 class="post-title">
-                <a href="{{ SITEURL }}/{{ article.url }}" itemprop="url" rel="bookmark">
+                <a href="{{ SITEURL }}/{{ article.url }}">
                     {{ article.title|striptags }}
                 </a>
             </h2>
         </header>
         <section class="post-excerpt">
             {{- article.summary|striptags -}}
-            <a class="read-more" itemprop="url" href="{{ SITEURL }}/{{ article.url}}" title="Read this article" rel="bookmark"></a>
+            <a class="read-more" href="{{ SITEURL }}/{{ article.url}}" title="Read this article" rel="bookmark"></a>
         </section>
         <footer class="post-meta">
             {% if AUTHOR_PIC_URL %}<img class="author-thumb" src="{% if article.author_pic_url %}{{ article.author_pic_url }}{% else %}{{ AUTHOR_PIC_URL }}{% endif %}" alt="{{ article.author }}" nopin="nopin">{% endif %}
