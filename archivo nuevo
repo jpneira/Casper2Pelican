@@ -1,25 +1,4 @@
-einstein ingles
-foucault frances
-esperanto 
-aleman
-
-
 pip3 install beautifulsoup4 typogrify
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 				<br/>{% for tag in article.tags %}<span class="icon-tag"><a href="{{ tag.url }}"></span>{{ tag.name | title }}{% if not loop.last %} {% endif %}</a>{% endfor %}
 
