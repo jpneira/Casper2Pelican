@@ -3,14 +3,14 @@
 {% block header_type %}post-head{% endblock %}
 {% block scroll %}{% endblock %}
 {% block header_title %}
-<h1 class="page-title" itemprop="headline">Archives</h1>
-<h2 class="page-description" itemprop="description">Stuff I've written in the past</h2>
+<h1 class="page-title">Archives</h1>
+<h2 class="page-description">Stuff I've written in the past</h2>
 {% endblock %}
 {% block content %}
-<main id="content" class="content" role="main">
+<main id="content" class="content">
     {% set last_year = 0 %}
     {% for article in dates %}
-    <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+    <article class="post">
         {% set year = article.date.strftime('%Y') %}
         {%if last_year != year %}
             <h1>{{ year }}</h1>
@@ -27,17 +27,17 @@
         {% endif %}
         <header class="post-header">
             <h2 class="post-title">
-                <a itemprop="url" href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
+                <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
             </h2>
         </header>
         <section class="post-excerpt">
             <div itemprop="text">{{- article.summary|striptags -}}
-                <a class="read-more" itemprop="url" href="{{ SITEURL }}/{{ article.url}}" title="Read this article" rel="bookmark"> &raquo;</a></div>
+                <a class="read-more" href="{{ SITEURL }}/{{ article.url}}"></a></div>
         </section>
         <footer class="post-meta">
-            <img class="author-thumb" src="{% if article.author_pic_url %}{{ article.author_pic_url }}{% else %}{{ AUTHOR_PIC_URL }}{% endif %}" alt="{{ article.author }}" nopin="nopin">
+            <img class="author-thumb" src="{% if article.author_pic_url %}{{ article.author_pic_url }}{% else %}{{ AUTHOR_PIC_URL }}{% endif %}">
             <a href="{{ article.author.url }}">{{ article.author }}</a> on {% for tag in article.tags %}<a href="{{ tag.url }}">{{ tag.name | title }}{% if not loop.last %}, {% endif %}</a>{% endfor %}
-            <time class="post-date" itemprop="datePublished" datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
+            <time class="post-date">{{ article.locale_date }}</time>
         </footer>
     </article>
     {% endfor %}
